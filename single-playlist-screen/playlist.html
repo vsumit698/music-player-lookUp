@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="playlist.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+
+<!-- NOTE:    header        -->
+  <div class="header">
+    <section class="branding">
+      <div class="company-logo">
+        <a href="../Home-Screen/home-screen.html"><img src="images/company.jpg" alt=""></a>
+      </div>
+      <div class="history">
+        <a href="#">History</a>
+      </div>
+    </section>
+    <section class="search-section">
+
+      <div class="search-bar">
+        <div class="search-icon">
+          <a href="#"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="search">
+          <input type="text" name="" value="" placeholder=" Search Music">
+        </div>
+        <div class="microphone-icon">
+          <a href="#"><i class="fas fa-microphone"></i></a>
+        </div>
+      </div>
+
+      <div class="user">
+        <img src="images/sumit.jpeg" alt="">
+      </div>
+
+    </section>
+  </div>
+
+<!-- NOTE:    Music Player        -->
+  <div class="music-player">
+    <section class="audio-section">
+      <div class="music-image">
+        <img src="images/artist-1.jpg" alt="">
+      </div>
+      <div class="music-detail">
+        <div class="music-name">
+            <span>Easier</span>
+            <div class="">
+              Charlie Puth
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="control-section">
+
+      <div class="control-button">
+        <div class="shuffle-button">
+          <a href="#"><i class="fas fa-random"></i></a>
+        </div>
+        <div class="prev-button">
+          <a href="#"><i class="fas fa-backward"></i></a>
+        </div>
+
+        <div class="play-button" id="play-music">
+          <a href="#play-music"><i class="far fa-play-circle"></i></a>
+          <div class="pause-button" id="pause-music" >
+            <a href="#" ><i class="far fa-pause-circle"></i></a>
+          </div>
+        </div>
+        <div class="forw-button">
+          <a href="#"><i class="fas fa-forward"></i></a>
+        </div>
+        <div class="loop-button">
+          <a href="#"><i class="fas fa-undo"></i></a>
+        </div>
+      </div>
+      <div class="music-completion">
+        <input type="range" name="" min="0" max="100" value="100"class="volume-slider" id="music-length">
+        <p style="text-align:center;margin-top:-1px;font-size:13px">Music : <span id="music-completed"></span> <span>%</span> </p>
+        <script type="text/javascript">
+          var s = document.getElementById("music-length");
+          var o = document.getElementById("music-completed");
+          o.innerHTML = s.value;
+          s.oninput = function(){
+            o.innerHTML = this.value;
+          };
+        </script>
+      </div>
+    </section>
+
+    <section class="volume-section">
+      <div class="speaker">
+        <a href="#"><i class="fas fa-volume-up"></i></a>
+      </div>
+      <div class="volume-range">
+        <input type="range" name="" min="0" max="100" value="100"class="volume-slider" id="vol-level">
+        <p style="text-align:center;margin-top:20px;font-size:13px">Sound: <span id="vol-output"></span> <span>%</span> </p>
+        <script type="text/javascript">
+          var slider = document.getElementById("vol-level");
+          var output = document.getElementById("vol-output");
+          output.innerHTML = slider.value;
+          slider.oninput = function(){
+            output.innerHTML = this.value;
+          };
+        </script>
+      </div>
+    </section>
+
+  </div>
+
+
+  <div class="playlist-container">
+
+    <div class="image-section">
+    </div>
+
+    <div class="playlist-info">
+      <section class="section-1">
+        <div class="playlist-name">
+          <p>Arijit Singh</p>
+        </div>
+
+        <span class="followers">1,198 Followers</span>
+
+        <div class="playlist-description">
+          <span>
+            Singh began his career when he participated in the contemporary
+            reality show, Fame Gurukul in 2005, and was discovered by
+            filmmaker Sanjay Leela Bhansali and Kumar Taurani.
+            At the start of his singing career.
+          </span>
+        </div>
+
+      </section>
+      <section class="section-2">
+        <button type="button" name="button" class="playlist-play-button">Play All</button>
+        <a href="#" class="follow">Follow</a>
+        <div class="track-detail">
+          247 Tracks | 40 albums
+        </div>
+      </section>
+    </div>
+
+  </div>
+
+  <div class="playlist-songs">
+    <ul class="list">
+
+      <li class="list-item">
+        <div class="song-info">
+          <span>1</span>
+          <img src="images/arijit.jpg" alt="">
+          <span>Arijit Singh - ABC</span>
+        </div>
+        <div class="song-control">
+          <a href="#like1" id="like1"><i class="fas fa-heart"></i></a>
+          <a href="#" id="add"><i class="far fa-plus-square"></i></a>
+        </div>
+      </li>
+
+      <li class="list-item">
+        <div class="song-info">
+          <span>2</span>
+          <img src="images/arijit.jpg" alt="">
+          <span>Arijit Singh - ABC</span>
+        </div>
+        <div class="song-control">
+          <a href="#like2" id="like2"><i class="fas fa-heart"></i></a>
+          <a href="#" id="add"><i class="far fa-plus-square"></i></a>
+        </div>
+      </li>
+
+      <li class="list-item">
+        <div class="song-info">
+          <span>3</span>
+          <img src="images/arijit.jpg" alt="">
+          <span>Arijit Singh - ABC</span>
+        </div>
+        <div class="song-control">
+          <a href="#like3" id="like3"><i class="fas fa-heart"></i></a>
+          <a href="#" id="add"><i class="far fa-plus-square"></i></a>
+        </div>
+      </li>
+
+      <li class="list-item">
+        <div class="song-info">
+          <span>4</span>
+          <img src="images/arijit.jpg" alt="">
+          <span>Arijit Singh - ABC</span>
+        </div>
+        <div class="song-control">
+          <a href="#like4" id="like4"><i class="fas fa-heart"></i></a>
+          <a href="#" id="add"><i class="far fa-plus-square"></i></a>
+        </div>
+      </li>
+
+      <li class="list-item">
+        <div class="song-info">
+          <span>5</span>
+          <img src="images/arijit.jpg" alt="">
+          <span>Arijit Singh - ABC</span>
+        </div>
+        <div class="song-control">
+          <a href="#like5" id="like5"><i class="fas fa-heart"></i></a>
+          <a href="#" id="add"><i class="far fa-plus-square"></i></a>
+        </div>
+      </li>
+
+      <li class="list-item">
+        <div class="song-info">
+          <span>6</span>
+          <img src="images/arijit.jpg" alt="">
+          <span>Arijit Singh - ABC</span>
+        </div>
+        <div class="song-control">
+          <a href="#like6" id="like6"><i class="fas fa-heart"></i></a>
+          <a href="#" id="add"><i class="far fa-plus-square"></i></a>
+        </div>
+      </li>
+
+      <li class="list-item">
+        <div class="song-info">
+          <span>7</span>
+          <img src="images/arijit.jpg" alt="">
+          <span>Arijit Singh - ABC</span>
+        </div>
+        <div class="song-control">
+          <a href="#like7" id="like7"><i class="fas fa-heart"></i></a>
+          <a href="#" id="add"><i class="far fa-plus-square"></i></a>
+        </div>
+      </li>
+      <li class="extra-space">
+
+      </li>
+
+    </ul>
+  </div>
+
+</body>
+
+</html>
